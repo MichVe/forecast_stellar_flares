@@ -28,7 +28,6 @@ last flare for known stars (0.60–0.64).
 | `run_forecasting.py` | Main experiment: neural models and non-learned baselines |
 | `run_history.py` | Flare-history models on identical samples and splits |
 | `scripts/aggregate_v2.py` | Summary tables and the paired star-cluster bootstrap |
-| `scripts/make_tables_v2.py`, `scripts/make_figures_v2.py` | Regenerate the paper's tables and figures from `results_v2/` |
 | `results_v2/` | Per-run metrics (`runs.jsonl`), per-sample test predictions (`predictions/*.npz`) and bootstrap summaries |
 | `tests/test_task.py` | Synthetic tests of the task definition and the leakage checks |
 | `main.py`, `results_v1/`, `scripts/ablation.py`, … | The earlier (v1) pipeline, kept for transparency. **Its window construction leaks the flare into the input** (see Section 6 of the paper), so do not use it as a forecasting baseline. |
@@ -55,20 +54,15 @@ python run_history.py     --split star --output-dir results_v2/history_star
 python run_forecasting.py --split time --output-dir results_v2/full_time
 python run_history.py     --split time --output-dir results_v2/history_time
 
-# tables and bootstrap: no retraining needed, the saved predictions are used
+# summary tables and bootstrap: no retraining needed, the saved predictions are used
 python scripts/aggregate_v2.py --results results_v2/full_star results_v2/history_star \
        --reference Poisson --n-boot 1000 --out results_v2/summary_star_vs_poisson.json
-python scripts/make_tables_v2.py
-python scripts/make_figures_v2.py
 ```
 
 A full neural run takes tens of hours on a laptop CPU.
 
 - `python run_forecasting.py --smoke` checks the whole pipeline in a few minutes.
 - `--resume` continues an interrupted run. Every run re-seeds itself, so a resumed run gives the same results as an uninterrupted one.
-
-Tables and figures are written to `paper/tables/` and `paper/figures/`.
-
 Tests:
 
 ```bash
