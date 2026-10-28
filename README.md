@@ -76,7 +76,7 @@ python tests/test_task.py
 
 ## Reporting problems
 
-Please open an [issue](https://github.com/MichVe/Articlle_forecast_stellar_flares/issues).
+Please open an [issue](https://github.com/MichVe/forecast_stellar_flares/issues).
 
 ## Licence
 
