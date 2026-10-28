@@ -1,0 +1,83 @@
+{
+  "forecast_quality": {
+    "ETSformer": {
+      "MAE": 0.004658541176468134,
+      "MSE": 9.608740219846368e-05,
+      "RMSE": 0.009802418181166506,
+      "MAE_flare_horizon": 0.006342289038002491,
+      "MSE_flare_horizon": 0.0002459902025293559,
+      "n_flare_horizon": 1772,
+      "MAE_quiescent_horizon": 0.0038506337441504,
+      "MSE_quiescent_horizon": 2.416004463157151e-05,
+      "n_quiescent_horizon": 3693
+    },
+    "LSTM": {
+      "MAE": 0.007454265840351582,
+      "MSE": 0.00016164912085514516,
+      "RMSE": 0.012714130754996394,
+      "MAE_flare_horizon": 0.010188172571361065,
+      "MSE_flare_horizon": 0.00034117436734959483,
+      "n_flare_horizon": 1772,
+      "MAE_quiescent_horizon": 0.006142464466392994,
+      "MSE_quiescent_horizon": 7.550813461421058e-05,
+      "n_quiescent_horizon": 3693
+    },
+    "NaivePersistence": {
+      "MAE": 0.0033856090158224106,
+      "MSE": 9.743876580614597e-05,
+      "RMSE": 0.009871107628130997,
+      "MAE_flare_horizon": 0.0051833572797477245,
+      "MSE_flare_horizon": 0.0002745437668636441,
+      "n_flare_horizon": 1772,
+      "MAE_quiescent_horizon": 0.0025230017490684986,
+      "MSE_quiescent_horizon": 1.2459049685276113e-05,
+      "n_quiescent_horizon": 3693
+    }
+  },
+  "hybrid_flare_prediction": {
+    "ETSformer": {
+      "accuracy": 0.726027397260274,
+      "precision": 0.5426356589147286,
+      "recall": 0.9859154929577465,
+      "f1": 0.7,
+      "roc_auc": 0.9685953559192996,
+      "best_threshold": 0.9800880551338196,
+      "precision_at_best": 0.9393939393939394,
+      "recall_at_best": 0.8732394366197183,
+      "f1_at_best": 0.9051094890510949
+    },
+    "Oracle (true future)": {
+      "accuracy": 0.958904109589041,
+      "precision": 0.9558823529411765,
+      "recall": 0.9154929577464789,
+      "f1": 0.935251798561151,
+      "roc_auc": 0.9857251617814998,
+      "best_threshold": 0.3912118077278137,
+      "precision_at_best": 0.9436619718309859,
+      "recall_at_best": 0.9436619718309859,
+      "f1_at_best": 0.9436619718309859
+    },
+    "LSTM": {
+      "accuracy": 0.817351598173516,
+      "precision": 0.6476190476190476,
+      "recall": 0.9577464788732394,
+      "f1": 0.7727272727272727,
+      "roc_auc": 0.9619337647506662,
+      "best_threshold": 0.9747613668441772,
+      "precision_at_best": 0.953125,
+      "recall_at_best": 0.8591549295774648,
+      "f1_at_best": 0.9037037037037037
+    },
+    "NaivePersistence": {
+      "accuracy": 0.726027397260274,
+      "precision": 0.5433070866141733,
+      "recall": 0.971830985915493,
+      "f1": 0.696969696969697,
+      "roc_auc": 0.9564141606395127,
+      "best_threshold": 0.9832628965377808,
+      "precision_at_best": 0.9253731343283582,
+      "recall_at_best": 0.8732394366197183,
+      "f1_at_best": 0.8985507246376812
+    }
+  }
+}

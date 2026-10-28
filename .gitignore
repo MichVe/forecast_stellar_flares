@@ -1,0 +1,9 @@
+tess_cache/
+*.pt
+__pycache__/
+*.pyc
+desktop.ini
+paper/
+results_v2/smoke/
+results_v2/backup_*/
+results_v2/*.log

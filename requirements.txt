@@ -1,0 +1,12 @@
+# Versions used for the v2 experiments (run_forecasting.py). For GPU, install the CUDA
+# build of torch matching your driver (https://pytorch.org/get-started/locally/).
+torch==2.9.1
+etsformer-pytorch==0.1.1
+lightkurve==2.6.0
+astroquery==0.4.11
+astropy==8.0.1
+numpy==2.4.1
+scipy==1.17.0
+scikit-learn==1.8.0
+pandas==2.3.3
+matplotlib==3.11.1

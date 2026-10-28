@@ -1,0 +1,68 @@
+{
+  "targets": [
+    "TIC 441420236",
+    "TIC 150359500",
+    "TIC 140045538",
+    "TIC 231914259",
+    "TIC 234506911",
+    "TIC 231017428",
+    "TIC 231910539",
+    "TIC 237885807",
+    "TIC 441398770",
+    "TIC 201883033",
+    "TIC 364588501",
+    "TIC 220536421",
+    "TIC 425938795",
+    "TIC 220556639",
+    "TIC 220433364",
+    "TIC 220433363"
+  ],
+  "sectors": [
+    1,
+    2
+  ],
+  "cache_dir": "./tess_cache",
+  "lookback": 150,
+  "horizons": [
+    5,
+    15,
+    30,
+    60
+  ],
+  "stride": 5,
+  "clip": 30.0,
+  "split": "star",
+  "folds": 4,
+  "val_stars": 2,
+  "split_seed": 0,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "models": [
+    "ETSformer",
+    "LSTM",
+    "Naive",
+    "Oracle",
+    "Direct-CNN",
+    "Climatology",
+    "Recency"
+  ],
+  "forecaster_epochs": 15,
+  "classifier_epochs": 25,
+  "forecaster_lr": 0.0003,
+  "classifier_lr": 0.001,
+  "batch_size": 256,
+  "fc_pos_repeat": 4,
+  "fc_max_train": 20000,
+  "fc_max_val": 5000,
+  "patience": 3,
+  "allow_missing": false,
+  "threshold_criterion": "tss",
+  "device": "cpu",
+  "output_dir": "results_v2/history_star",
+  "smoke": false
+}
